@@ -2056,13 +2056,13 @@ input:focus::placeholder,textarea:focus::placeholder {
     }
 
     .header__logo--img {
-        min-width: 145px;
-        min-height: 68px
+        min-width: 157px;
+        min-height: 62px
     }
 
     .header__burger {
         position: fixed;
-        right: max(var(--container-padding),50% - 791px);
+        right: max(var(--container-padding),50% - 869px);
         top: 28px;
         padding: 15px
     }

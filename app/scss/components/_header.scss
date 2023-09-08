@@ -62,7 +62,7 @@
 			
 			object-fit: contain;
 			@include _992 {
-				min-width: 145px; min-height: 68px;
+				min-width: 157px; min-height: 62px;
 			}
 		}
 	}
@@ -215,7 +215,7 @@
 		position: relative;
 		@include _992 {
 			position: fixed;
-			right: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px)); top: 28px;
+			right: max(var(--container-padding), calc(50% - #{math.div($containerLarge, 2)}px)); top: 28px;
 		}
 		&._mob-menu-active {
 			transform: translate(calc(1px - var(--scrollbar-width,0px)/2 - 0.5px));
