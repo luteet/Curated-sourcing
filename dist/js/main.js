@@ -111,6 +111,40 @@ body.addEventListener('click', function (event) {
 	}
 	
 	// =-=-=-=-=-=-=-=-=-=-=-=- </accordion> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+	// =-=-=-=-=-=-=-=-=-=-=-=- <filter> -=-=-=-=-=-=-=-=-=-=-=-=
+	
+	const filterTarget = $(".filter__target")
+	if(filterTarget) {
+	
+		filterTarget.closest('.filter').classList.toggle('_active');
+	
+	} else if(!$('.filter')) {
+		document.querySelectorAll('.filter._active').forEach(filter => {
+			filter.classList.remove('_active')
+		})
+	}
+
+	const filterBlockTarget = $(".filter__block--target")
+	if(filterBlockTarget) {
+	
+		if(filterBlockTarget.parentElement.classList.contains('_active')) {
+			filterBlockTarget.parentElement.classList.toggle('_active');
+		} else {
+			const activeItem = filterBlockTarget.parentElement.parentElement.querySelector('._active');
+			if(activeItem) {
+				activeItem.classList.remove('_active')
+			}
+
+			filterBlockTarget.parentElement.classList.add('_active');
+		}
+		
+	
+	}
+	
+	// =-=-=-=-=-=-=-=-=-=-=-=- </filter> -=-=-=-=-=-=-=-=-=-=-=-=
 	
 	
 
@@ -298,6 +332,28 @@ if(document.querySelector('.curated-insider__slider')) {
 
 }
 
+if(document.querySelector('.our-team__slider')) {
+
+	const slider = new Splide('.our-team__slider', {
+
+		//perPage: "auto",
+		autoWidth: true,
+		pagination: false,
+		gap: 16,
+		mediaQuery: "min",
+
+		breakpoints: {
+			768: {
+				gap: 34,
+			}
+		}
+
+	});
+
+	slider.mount();
+
+}
+
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
@@ -319,6 +375,36 @@ AOS.init({
 // =-=-=-=-=-=-=-=-=-=-=-=- </animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
 */
+
+// =-=-=-=-=-=-=-=-=-=-=-=- <filter> -=-=-=-=-=-=-=-=-=-=-=-=
+
+const filterInputs = document.querySelectorAll('.filter__block--list input'),
+filterUrl = new URL(window.location.href),
+filterUrlParams = new URLSearchParams(filterUrl.search);
+
+filterInputs.forEach(input => {
+	
+	if(filterUrlParams.get(input.name) == "on") {
+		input.checked = true;
+	}
+
+	input.addEventListener('change', function () {
+		if(input.checked) {
+			filterUrlParams.set(input.name, 'on');
+		} else {
+			filterUrlParams.delete(input.name);
+		}
+
+		filterUrl.search = filterUrlParams.toString();
+		history.pushState(null,null,filterUrl.href)
+		
+	})
+})
+
+// =-=-=-=-=-=-=-=-=-=-=-=- </filter> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <scroll> -=-=-=-=-=-=-=-=-=-=-=-=
 

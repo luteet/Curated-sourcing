@@ -9,6 +9,81 @@
 		position: absolute;
 	}
 
+	&._mode-1 {
+		@include _992 {
+			padding-bottom: 28px;
+			background: #F5F5F5;
+		}
+
+		@include _992 {
+			& .header__burger {
+				top: 31px;
+			}
+	
+			&._on-top .header__burger {
+				background: transparent;
+				
+				@media (any-hover: hover) {
+					&:hover {
+						background: var(--black);
+					}
+				}
+			}
+		}
+	}
+
+	&._mode-2 {
+
+		@include _992 {
+
+			.header__logo {
+				filter: invert(1);
+			}
+	
+			&._on-top .header__burger {
+				background: transparent;
+				color: var(--white);
+				> div > span {
+					background: var(--white);
+				}
+				
+				@media (any-hover: hover) {
+					&:hover {
+						background: var(--black);
+					}
+				}
+			}
+		}
+	}
+
+	&._mode-3 {
+
+		@include _992 {
+
+			.header__burger {
+				background: transparent;
+				color: var(--white);
+				> div > span {
+					background: var(--white);
+				}
+			}
+	
+			&._on-top .header__burger {
+				background: transparent;
+				color: var(--white);
+				> div > span {
+					background: var(--white);
+				}
+				
+				@media (any-hover: hover) {
+					&:hover {
+						background: var(--black);
+					}
+				}
+			}
+		}
+	}
+
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
@@ -17,7 +92,7 @@
 	}
 	//overflow: hidden;
 	&._mob-menu-active &__logo {
-		transform: translate(calc(1px - var(--scrollbar-width,0px)/2 - 1.5px),0);
+		transform: translate(calc(1px - var(--scrollbar-width,0px)/2 - 0.3px),0);
 		/* position: static;
 		transform: translate(calc(var(--scrollbar-width,0px)/2),0); */
 		//right: calc(var(--scrollbar-width,0px) / 2);

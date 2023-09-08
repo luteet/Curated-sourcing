@@ -1,0 +1,36 @@
+.about-us-hero {
+
+	padding-top: calc(var(--height-header,64px) + 50px); padding-bottom: 64px;
+
+	@include _992 {
+		padding-bottom: 157px;
+	}
+
+	background: var(--accent);
+	text-align: center;
+
+	// .about-us-hero__title
+
+	&__title {
+		display: inline-block;
+		font-family: var(--title-font);
+
+		font-size: 1.25rem;
+
+		@include _550 {
+			font-size: 1.5rem;
+		}
+		
+		@include _768 {
+			font-size: 2rem;
+		}
+		
+		@include _992 {
+			font-size: 2.25rem;
+		}
+		line-height: 180.555556%;
+		color: var(--white);
+
+		max-width: 812px;
+	}
+}

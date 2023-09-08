@@ -89,6 +89,21 @@
 
 	&__card {
 
+		display: flex;
+		flex-direction: column;
+
+		@include _992 {
+			&._large {
+				grid-column: 2 span;
+			}
+	
+			&._large & {
+				&--image {
+					padding-top: 59.4%;
+				}
+			}
+		}
+
 		position: relative;
 		@media (any-hover: hover) {
 			&:hover & {
@@ -150,6 +165,7 @@
 		// .recent-work__card--image
 
 		&--image {
+			flex: 1 1 auto;
 		}
 
 		// .recent-work__card--content

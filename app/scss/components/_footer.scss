@@ -15,7 +15,7 @@
 
 	background: #F2F2F2;
 
-	padding-top: 27px; padding-bottom: 37px;
+	padding-top: 57px; padding-bottom: 37px;
 
 	min-height: 385px;
 
@@ -73,7 +73,6 @@
 
 		> ul {
 			display: flex;
-			
 			flex-direction: column;
 			@include _550 {
 				flex-wrap: wrap;
@@ -181,9 +180,9 @@
 				display: flex;
 				flex-direction: column;
 
-				/* li:not(:first-child) {
-					margin-top: 15px;
-				} */
+				@include _550 {
+					padding-top: 10px;
+				}
 
 				a {
 					display: block;

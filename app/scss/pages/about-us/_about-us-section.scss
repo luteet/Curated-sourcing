@@ -1,0 +1,113 @@
+.about-us-section {
+
+	margin-top: 82px;
+	@include _992 {
+		&:first-child {
+			margin-top: 82px;
+		}
+	}
+	&:last-child {
+		margin-bottom: 60px;
+	}
+
+	@include _992 {
+		min-height: 773px;
+		&:last-child {
+			margin-bottom: 121px;
+		}
+	}
+
+	// .about-us-section__content
+
+	&__content {
+
+		// .about-us-section__content--wrapper
+
+		&--wrapper {
+			
+			//margin: -25% calc(0px - var(--container-padding) / 2) 0;
+			//padding: 46px calc(var(--container-padding)) 60px;
+
+			padding: 30px 0 0;
+
+			@include _992 {
+				padding: 100px 0;
+				max-width: calc(((100vw - var(--container-padding) * 2) * 0.45) - var(--container-padding));
+			}
+
+			@include _container {
+				max-width: 33%;
+			}
+		}
+	}
+
+	&:nth-child(even) & {
+		&__content {
+			display: flex;
+			justify-content: flex-end;
+		}
+		&__image {
+			@include _992 {
+				position: absolute;
+				left: 0; top: 0; right: auto;
+				width: calc(((100vw - var(--container-padding) * 2) * 0.6) - var(--container-padding));
+			}
+	
+			@include _container {
+				width: calc(100vw - (((100vw - #{$container}px) / 2) + ((#{$container}px - var(--container-padding) * 2) * 0.4) + var(--container-padding)));
+			}
+		}
+	}
+
+	// .about-us-section__title
+
+	&__title {
+		max-width: 300px;
+	}
+
+	// .about-us-section__text
+
+	&__text {
+
+		font-size: 0.875rem;
+
+		@include _550 {
+			font-size: 1rem;
+		}
+		
+		@include _768 {
+			font-size: 1.125rem;
+		}
+		
+		@include _992 {
+			font-size: 1.3125rem;
+		}
+		line-height: 190.47619%;
+
+		padding-top: 10px;
+		p {
+			padding-top: 16px;
+		}
+	}
+
+	// .about-us-section__image
+
+	&__image {
+		@include _992 {
+			position: absolute;
+			right: 0; top: 0;
+			width: calc(((100vw - var(--container-padding) * 2) * 0.6) - var(--container-padding));
+			height: 100%;
+			padding-top: 0;
+		}
+
+		@include _container {
+			width: calc(100vw - (((100vw - #{$container}px) / 2) + ((#{$container}px - var(--container-padding) * 2) * 0.4) + var(--container-padding)));
+		}
+		
+		img {
+			width: 100%; height: 100%;
+			object-fit: cover;
+		}
+	}
+}

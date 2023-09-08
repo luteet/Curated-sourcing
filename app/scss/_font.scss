@@ -110,6 +110,9 @@
 
 	font-family: var(--title-font);
 	text-transform: uppercase;
+	&._none-uppercase {
+		text-transform: none;
+	}
 	font-weight: 400;
 	font-size: 1.375rem;
 	@include _550 {

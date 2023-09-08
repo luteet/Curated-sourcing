@@ -5,21 +5,166 @@
 	<main class="main">
 		<section class="our-work container">
 			<div class="our-work__header">
-				<h2 class="our-work__title">
-
+				<h2 class="our-work__title section-title">
+					Our work
 				</h2>
-				<div class="our-work__sort">
-					<div class="sort">
-						<button class="sort__target" type="button">
-							Brand
-							<svg width="24" height="24" viewBox="0 0 84 84">
-								<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
-							</svg>
+				<div class="our-work__filter filter">
+					<button class="filter__target" type="button">
+						Filter
+						<svg width="24" height="24" viewBox="0 0 84 84">
+							<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+						</svg>
+					</button>
+					<div class="filter__row">
+						<div class="filter__block">
+							<button class="filter__block--target" type="button">
+								BRAND
+							</button>
+							<div>
+								<ul class="filter__block--list">
+									<li>
+										<label>
+											<input type="checkbox" name="brand-1">
+											<span></span>
+											<span>Brand</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" name="brand-2">
+											<span></span>
+											<span>Brand</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" name="brand-3">
+											<span></span>
+											<span>Brand</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" name="brand-4">
+											<span></span>
+											<span>Brand</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="filter__block">
+							<button class="filter__block--target" type="button">
+								TYPE
+							</button>
+							<div>
+								<ul class="filter__block--list">
+									<li>
+										<label>
+											<input type="checkbox" name="type-1">
+											<span></span>
+											<span>Type</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" name="type-2">
+											<span></span>
+											<span>Type</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" name="type-3">
+											<span></span>
+											<span>Type</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" name="type-4">
+											<span></span>
+											<span>Type</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="filter__block">
+							<button class="filter__block--target" type="button">
+								COLOUR
+							</button>
+							<div>
+								<ul class="filter__block--list">
+									<li>
+										<label>
+											<input type="checkbox" name="colour-1">
+											<span></span>
+											<span>Colour</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" name="colour-1">
+											<span></span>
+											<span>Colour</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" name="colour-1">
+											<span></span>
+											<span>Colour</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" name="colour-1">
+											<span></span>
+											<span>Colour</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<button class="filter__apply-filters btn" type="button">
+							APPLY FILTERS
 						</button>
 					</div>
 				</div>
 			</div>
+			<div class="our-work__result">
+				<ul class="our-work__list">
+					@@loop("html/_recent-work-slide.html", [
+						{
+							"class": "our-work__card "
+						},
+						{
+							"class": "our-work__card "
+						},
+						{
+							"class": "our-work__card "
+						},
+						{
+							"class": "our-work__card _large "
+						},
+						{
+							"class": "our-work__card "
+						},
+						{
+							"class": "our-work__card "
+						},
+						{
+							"class": "our-work__card "
+						},
+						{
+							"class": "our-work__card "
+						},
+					])
+				</ul>
+			</div>
 		</section>
+		@@include("html/_like-section.html")
 	</main>
 
 @@include("html/_footer.html")

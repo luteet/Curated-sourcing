@@ -1,0 +1,46 @@
+@@include("html/_header.html", {
+	"class": " _mode-3"
+})
+
+	<main class="main">
+		<section class="contact-us">
+			<div class="contact-us__content container">
+				<div class="contact-us__content--wrapper">
+					<h2 class="contact-us__title section-title">
+						Contact us
+					</h2>
+					<div class="contact-us__text">
+						<p>
+							We would love to hear from you and learn more about how we can collaborate. fill in this form and book a time for an introductory call to discuss your needs further.
+						</p>
+					</div>
+					<form method="post" class="contact-us__form">
+						<label class="min">
+							<input type="text" name="first-name" placeholder="First Name" required>
+						</label>
+						<label class="min">
+							<input type="text" name="last-name" placeholder="Last Name" required>
+						</label>
+						<label>
+							<input type="email" name="email" placeholder="Email Address" required>
+						</label>
+						<label>
+							<textarea name="message" placeholder="Message"></textarea>
+						</label>
+						<button class="btn _accent" type="submit">
+							Submit
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="contact-us__image">
+				<picture>
+					<source srcset="img/contacts-us/contacts-us-image.avif" type="image/avif">
+					<source srcset="img/contacts-us/contacts-us-image.webp" type="image/webp">
+					<img src="img/contacts-us/contacts-us-image.jpg" alt="" width="1063" height="1167" loading="lazy">
+				</picture>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

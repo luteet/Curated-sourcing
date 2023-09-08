@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header container _mode-3">
+			<div class="header__wrapper">
+				<a href="index.html" class="header__logo">
+					<picture>
+						<source srcset="img/logo.avif" type="image/avif">
+						<source srcset="img/logo.webp" type="image/webp">
+						<img src="img/logo.png" alt="Logo" width="100" height="50" loading="lazy" class="header__logo--img">
+					</picture>
+				</a>
+				<nav class="header__nav">
+					<div class="header__nav--bg"></div>
+					<button class="header__nav--close" type="button" title="Close"></button>
+					<div class="header__nav--body">
+						<ul class="header__nav--list">
+							<li><a href="#"><span>HOME</span></a></li>
+							<li><a href="#"><span>APPROACH</span></a></li>
+							<li><a href="#"><span>OUR WORK</span></a></li>
+							<li><a href="#"><span>INSIDER</span></a></li>
+							<li><a href="#"><span>ABOUT US</span></a></li>
+							<li><a href="#"><span>CONTACT</span></a></li>
+						</ul>
+					</div>
+				</nav>
+				<button class="header__burger" type="button" aria-label="Menu">
+					<span>Menu</span>
+					<div>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</button>
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="contact-us">
+				<div class="contact-us__content container">
+					<div class="contact-us__content--wrapper">
+						<h2 class="contact-us__title section-title">
+							Contact us
+						</h2>
+						<div class="contact-us__text">
+							<p>
+								We would love to hear from you and learn more about how we can collaborate. fill in this form and book a time for an introductory call to discuss your needs further.
+							</p>
+						</div>
+						<form method="post" class="contact-us__form">
+							<label class="min">
+								<input type="text" name="first-name" placeholder="First Name" required>
+							</label>
+							<label class="min">
+								<input type="text" name="last-name" placeholder="Last Name" required>
+							</label>
+							<label>
+								<input type="email" name="email" placeholder="Email Address" required>
+							</label>
+							<label>
+								<textarea name="message" placeholder="Message"></textarea>
+							</label>
+							<button class="btn _accent" type="submit">
+								Submit
+							</button>
+						</form>
+					</div>
+				</div>
+				<div class="contact-us__image">
+					<picture>
+						<source srcset="img/contacts-us/contacts-us-image.avif" type="image/avif">
+						<source srcset="img/contacts-us/contacts-us-image.webp" type="image/webp">
+						<img src="img/contacts-us/contacts-us-image.jpg" alt="" width="1063" height="1167" loading="lazy">
+					</picture>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer container _min">
+			<div class="footer__header">
+				<a href="index.html" class="footer__logo">
+					<picture>
+						<source srcset="img/logo.avif" type="image/avif">
+						<source srcset="img/logo.webp" type="image/webp">
+						<img src="img/logo.png" width="156" height="62" loading="lazy" alt="Logo" class="footer__logo--img">
+					</picture>
+				</a>
+				<div class="footer__contacts">
+					<ul>
+						<li>
+							<a href="mailto:hello@curatedsourcing.com">
+								hello@curatedsourcing.com
+							</a>
+						</li>
+						<li>
+							<a href="tel:+440209990292">
+								+44 020 999 0292
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<nav class="footer__nav">
+				<ul>
+					<li>
+						<button type="button">
+							SOCIALS
+						</button>
+						<div>
+							<ul>
+								<li>
+									<a href="#">
+										<svg width="11" height="11" viewBox="0 0 10.109 10.109">
+											<use xlink:href="img/sprites.svg#arrow-link"></use>
+										</svg>
+										Instagram
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<svg width="11" height="11" viewBox="0 0 10.109 10.109">
+											<use xlink:href="img/sprites.svg#arrow-link"></use>
+										</svg>
+										Facebook
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<svg width="11" height="11" viewBox="0 0 10.109 10.109">
+											<use xlink:href="img/sprites.svg#arrow-link"></use>
+										</svg>
+										Twitter
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<button type="button">
+							NAVIGATION
+						</button>
+						<div>
+							<ul>
+								<li>
+									<a href="#">
+										Our Work
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Our Approach
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Our Values
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<button type="button">
+							PORTFOLIO
+						</button>
+						<div>
+							<ul>
+								<li>
+									<a href="#">
+										Beauty Tools
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Packaging
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Bags
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Accessories
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<div class="footer__copy visible-on-mob">
+				COPYRIGHT @ CURATED SOURCING
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

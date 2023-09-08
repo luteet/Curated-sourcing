@@ -1,14 +1,14 @@
 .expert {
 
-	min-height: calc(var(--svh,1vh)*100);
-	min-height: calc(var(--svh,1svh)*100);
-
 	display: flex;
 	flex-direction: column;
 	
 	@include _992 {
 		flex-direction: row;
 		background: transparent;
+
+		min-height: calc(var(--svh,1vh)*100);
+		min-height: 100svh;
 	}
 
 	&__section-title {
@@ -36,14 +36,6 @@
 		min-height: 100%;
 		
 		background: var(--accent);
-		/* &::before {
-			content: '';
-			position: absolute;
-			left: 0; top: 0;
-			width: 100%; height: calc(100% + 80px);
-			background: var(--accent);
-			z-index: -1;
-		} */
 
 		@include _992 {
 			

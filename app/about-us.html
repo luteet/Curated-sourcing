@@ -1,0 +1,91 @@
+@@include("html/_header.html", {
+	"class": " _mode-2"
+})
+
+	<main class="main">
+		<section class="about-us-hero container">
+			<h2 class="about-us-hero__title">
+				We are an end-to-end merchandise business giving you a streamline merchandise sourcing and give you access to considered, on-trend products with minimal fuss. 
+			</h2>
+		</section>
+		<div>
+			<section class="about-us-section">
+				<div class="about-us-section__image image-aspect-ratio">
+					<picture>
+						<source srcset="img/index/expert-know-how/index-expert-know-how-image.avif" type="image/avif">
+						<source srcset="img/index/expert-know-how/index-expert-know-how-image.webp" type="image/webp">
+						<img src="img/index/expert-know-how/index-expert-know-how-image.png" alt="" width="1142" height="773" loading="lazy">
+					</picture>
+				</div>
+				<div class="about-us-section__content container">
+					<div class="about-us-section__content--wrapper">
+						<h2 class="about-us-section__title section-title">
+							Specialised in trend insights
+						</h2>
+						<div class="about-us-section__text">
+							<p>
+								From brief to completion, we collaborate with the best and most brilliant manufacturers around the globe to create an original solution, tailor-made for you. We’re proud to work with manufacturers with the most sought after product ranges and to be able to deliver on briefs faster and more seamlessly than anyone else.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="about-us-section">
+				<div class="about-us-section__image image-aspect-ratio">
+					<picture>
+						<source srcset="img/index/expert-know-how/index-expert-know-how-image.avif" type="image/avif">
+						<source srcset="img/index/expert-know-how/index-expert-know-how-image.webp" type="image/webp">
+						<img src="img/index/expert-know-how/index-expert-know-how-image.png" alt="" width="1142" height="773" loading="lazy">
+					</picture>
+				</div>
+				<div class="about-us-section__content container">
+					<div class="about-us-section__content--wrapper">
+						<h2 class="about-us-section__title section-title">
+							Specialised in trend insights
+						</h2>
+						<div class="about-us-section__text">
+							<p>
+								From brief to completion, we collaborate with the best and most brilliant manufacturers around the globe to create an original solution, tailor-made for you. We’re proud to work with manufacturers with the most sought after product ranges and to be able to deliver on briefs faster and more seamlessly than anyone else.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<section class="our-team container">
+			<div class="our-team__slider splide">
+				<div class="our-team__header">
+					<h2 class="our-team__title section-title _none-uppercase">
+						Our Team
+					</h2>
+					<div class="our-team__nav splide__arrows">
+						<button class="our-team__arrow splide__arrow splide__arrow--prev" type="button" title="Previous slide">
+							<svg width="8.264" height="14.417" viewBox="0 0 8.264 14.417">
+								<use xlink:href="img/sprites.svg#slider-arrow-prev"></use>
+							</svg>
+						</button>
+						<button class="our-team__arrow splide__arrow splide__arrow--next" type="button" title="Next slide">
+							<svg width="8.264" height="14.417" viewBox="0 0 8.264 14.417">
+								<use xlink:href="img/sprites.svg#slider-arrow-prev"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="our-team__track splide__track">
+					<ul class="our-team__list splide__list">
+						@@loop("html/_our-team-card.html", [
+							{},
+							{},
+							{},
+							{},
+							{},
+							{},
+						])
+					</ul>
+				</div>
+			</div>
+		</section>
+		@@include("html/_like-section.html")
+	</main>
+
+@@include("html/_footer.html")

@@ -86,9 +86,14 @@ section {
 	padding-left: var(--container-padding);
 	padding-right: var(--container-padding);
 	
-	@media (min-width: #{$container}px) {
+	@media (min-width: #{$containerMin}px) {
 		padding-left: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
 		padding-right: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+
+		&._min {
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+		}
 
 		&._large {
 			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerLarge, 2)}px));
@@ -108,6 +113,11 @@ section {
 	border: 2px solid var(--dark);
 
 	font-size: 0.875rem;
+
+	&._accent {
+		background: var(--accent);
+		border-color: var(--accent);
+	}
 	
 	@include _768 {
 		font-size: 1rem;
@@ -125,6 +135,9 @@ section {
 		&:hover {
 			background: transparent;
 			color: var(--dark);
+			&._accent {
+				color: var(--accent);
+			}
 		}
 	}
 }
