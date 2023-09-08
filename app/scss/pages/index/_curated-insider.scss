@@ -1,0 +1,173 @@
+.curated-insider {
+
+	padding-top: 38px; padding-bottom: 32px;
+
+	@include _992 {
+		padding-top: 75px; padding-bottom: 71px;
+	}
+
+	// .curated-insider__slider
+
+	&__slider {
+
+		padding: 0 50px 0 0;
+
+		@include _550 {
+			padding: 0;
+		}
+
+		// .curated-insider__slider--track
+
+		&--track {
+			margin-top: 30px;
+			&.splide__track {
+				overflow: visible;
+			}
+		}
+
+		// .curated-insider__slider--list
+
+		&--list {
+		}
+
+		// .curated-insider__slider--card
+
+		&--card {
+		}
+	}
+
+	// .curated-insider__header
+
+	&__header {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+
+		width: calc(100% + 60px);
+
+		@include _550 {
+			width: 100%;
+		}
+	}
+
+	// .curated-insider__content
+
+	&__content {
+		
+	}
+
+	// .curated-insider__section-title
+
+	&__section-title {
+	}
+
+	// .curated-insider__text
+
+	&__text {
+		padding-top: 15px;
+		display: none;
+		@include _768 {
+			display: block;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		@include _768 {
+			display: none;
+		}
+	}
+
+	&__arrow {
+		position: static;
+		transform: none;
+		background: transparent;
+
+		svg {
+			width: 15px; height: 15px;
+		}
+
+		&.splide__arrow--prev {
+			margin-right: 10px;
+			svg {
+				transform: none;
+			}
+		}
+
+		&.splide__arrow--next {
+			svg {
+				transform: scaleX(-1);
+			}
+		}
+	}
+
+	// .curated-insider__see-more
+
+	&__see-more {
+		display: none;
+		@include _768 {
+			display: inline-block;
+		}
+	}
+
+	// .curated-insider__card
+
+	&__card {
+
+		// .curated-insider__card--link
+
+		&--link {
+		}
+
+		// .curated-insider__card--image
+
+		&--image {
+			--padding-aspect-ratio: 118.902439%;
+			background: #BFBFBF;
+		}
+
+		// .curated-insider__card--date
+
+		&--date {
+			margin-top: 10px;
+			display: block;
+
+			text-transform: uppercase;
+			font-size: 0.625rem;
+			
+			@include _768 {
+				font-size: 0.75rem;
+			}
+			
+			@include _992 {
+				font-size: 0.875rem;
+			}
+			line-height: 135.714286%;
+			color: rgba(0, 0, 0, 0.42);
+		}
+
+		// .curated-insider__card--title
+
+		&--title {
+			margin-top: 10px;
+
+			font-size: 0.75rem;
+
+			@include _550 {
+				font-size: 0.875rem;
+			}
+			
+			@include _768 {
+				font-size: 1rem;
+			}
+			
+			@include _992 {
+				font-size: 1.125rem;
+			}
+			line-height: 166.666667%;
+			color: var(--black);
+			max-width: 222px;
+			//padding-right: 10p;
+		}
+	}
+}

@@ -1,0 +1,157 @@
+
+@font-face {
+	@include font-include('Open Sans', 300, swap, normal, 'OpenSans-Light');
+}
+
+@font-face {
+	@include font-include('Open Sans', 400, swap, normal, 'OpenSans-Regular');
+}
+
+@font-face {
+	@include font-include('Open Sans', 600, swap, normal, 'OpenSans-SemiBold');
+}
+
+@font-face {
+	@include font-include('Open Sans', 700, swap, normal, 'OpenSans-Bold');
+}
+
+@font-face {
+	@include font-include('Didot', 700, swap, normal, 'Didot');
+	font-weight: 700;
+	font-family: "Didot";
+	font-display: swap;
+	font-style: normal;
+
+	src: url('Didot.otf') format('opentype');
+}
+
+@font-face {
+	@include font-include('Goudy Old Style', 400, swap, normal, 'GoudyStd');
+}
+
+@font-face {
+	@include font-include('Goudy Old Style', 700, swap, normal, 'GoudyStd-Bold');
+}
+
+@font-face {
+	@include font-include('Futura PT', 700, swap, normal, 'FuturaPT-Book');
+}
+
+.main-title {
+	font-family: var(--title-font);
+	font-weight: 400;
+	line-height: 115%;
+	text-transform: uppercase;
+
+	font-size: 1.5rem; // 24px
+
+	@include _768 {
+		font-size: 2.25rem; // 36px
+	}
+
+	@include _992 {
+		font-size: 2.8125rem; // 45px
+	}
+}
+
+.title {
+	
+	font-family: var(--title-font);
+	font-weight: 700;
+
+	font-size: 1.125rem;
+
+	@include _768 {
+		font-size: 1.5rem;
+	}
+
+	@include _992 {
+		font-size: 1.875rem;
+	}
+
+}
+
+.large-section-title {
+	font-family: var(--title-font);
+	font-size: 1.375rem;
+	line-height: 144.444444%;
+	text-align: center;
+
+	position: relative;
+	padding-bottom: 20px;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50%; bottom: 0;
+		width: 70px; 
+		@include _768 {
+			width: 121px;
+		}
+		height: 1px;
+		transform: translate(-50%,0);
+		background: #555555;
+
+	}
+
+	@include _550 {
+		font-size: 1.5rem;
+	}
+	
+	@include _768 {
+		font-size: 2rem;
+	}
+	
+	@include _992 {
+		font-size: 2.8125rem;
+	}
+}
+
+.section-title {
+
+	font-family: var(--title-font);
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 1.375rem;
+	@include _550 {
+		font-size: 1.5rem;
+	}
+	
+	@include _768 {
+		font-size: 1.75rem;
+	}
+	
+	@include _992 {
+		font-size: 2.1875rem;
+	}
+	line-height: 125%;
+	
+
+	position: relative;
+	padding-bottom: 20px; padding-left: 5px;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0; bottom: 0;
+		width: 70px; 
+		@include _768 {
+			width: 121px;
+		}
+		height: 1px;
+		background: #555555;
+	}
+	&._disable-decor {
+		@include _768 {
+			padding-bottom: 0; padding-left: 0;
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	
+
+}
+
+.txt-center {
+	text-align: center;
+}

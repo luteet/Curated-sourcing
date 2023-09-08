@@ -1,0 +1,138 @@
+.expert {
+
+	min-height: calc(var(--svh,1vh)*100);
+	min-height: calc(var(--svh,1svh)*100);
+
+	display: flex;
+	flex-direction: column;
+	
+	@include _992 {
+		flex-direction: row;
+		background: transparent;
+	}
+
+	&__section-title {
+		@include _992 {
+			position: absolute;
+			width: 1px; height: 1px;
+			margin: -1px; padding: 0;
+			border: 0;
+			
+			white-space: nowrap;
+			clip-path: inset(100%);
+			clip: rect(0 0 0 0);
+			overflow: hidden;
+		}
+	}
+
+	// .expert__content
+
+	&__content {
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		min-height: 100%;
+		
+		background: var(--accent);
+		/* &::before {
+			content: '';
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: calc(100% + 80px);
+			background: var(--accent);
+			z-index: -1;
+		} */
+
+		@include _992 {
+			
+			background: transparent;
+			margin: 0;
+		}
+
+		// .expert__content--wrapper
+
+		&--wrapper {
+			
+			background: var(--white);
+			margin: -25% calc(0px - var(--container-padding) / 2) 0;
+			padding: 46px calc(var(--container-padding)) 60px;
+
+			@include _992 {
+				padding: 30px 0;
+				margin: 0;
+				background: transparent;
+				text-align: right;
+				max-width: calc(((100vw - var(--container-padding) * 2) * 0.3) - var(--container-padding));
+			}
+
+			@include _container {
+				max-width: 37%;
+			}
+
+			h3 {
+				font-family: var(--title-font);
+				font-size: 2.1875rem;
+				line-height: 185.714286%;
+				text-transform: uppercase;
+
+				display: none;
+
+				@include _992 {
+					display: block;
+				}
+			}
+
+			p {
+				padding-top: 20px;
+			}
+
+			font-size: 0.875rem;
+
+			@include _550 {
+				font-size: 1rem;
+			}
+			
+			@include _768 {
+				font-size: 1.125rem;
+			}
+			
+			@include _992 {
+				font-size: 1.3125rem;
+			}
+
+			line-height: 190.47619%;
+		}
+
+		// .expert__content--btn
+
+		&--btn {
+			margin-top: 21px;
+			@include _550 {
+				margin-top: 41px;
+			}
+			line-height: 150%;
+		}
+	}
+
+	// .expert__image
+
+	&__image {
+		
+		@include _992 {
+			position: absolute;
+			right: 0; top: 0;
+			width: calc(((100vw - var(--container-padding) * 2) * 0.7) - var(--container-padding));
+		}
+
+		@include _container {
+			width: calc(100vw - (((100vw - #{$container}px) / 2) + ((#{$container}px - var(--container-padding) * 2) * 0.331) + var(--container-padding)));
+		}
+		height: 100%;
+		img {
+			width: 100%; height: 100%;
+			object-fit: cover;
+		}
+	}
+}

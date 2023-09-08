@@ -1,0 +1,46 @@
+.text-section {
+
+	padding-top: 42px; padding-bottom: 42px;
+	
+	@include _992 {
+		padding-top: 92px; padding-bottom: 92px;
+	}
+	background: var(--accent);
+
+	text-align: center;
+
+	// .text-section__title
+
+	&__title {
+		max-width: 922px;
+		margin: 0 auto;
+
+		font-family: var(--title-font);
+		font-size: 1.25rem;
+		@include _550 {
+			font-size: 1.5rem;
+			line-height: 150%;
+		}
+		
+		@include _768 {
+			font-size: 2rem;
+		}
+		
+		@include _992 {
+			font-size: 2.25rem;
+		}
+
+		line-height: 200%;
+		color: var(--white);
+	}
+
+	// .text-section__see-more
+
+	&__see-more {
+		display: inline-block;
+		margin-top: 40px;
+		@include _992 {
+			margin-top: 70px;
+		}
+	}
+}
