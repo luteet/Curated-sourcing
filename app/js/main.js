@@ -341,6 +341,7 @@ if(document.querySelector('.our-team__slider')) {
 		pagination: false,
 		gap: 16,
 		mediaQuery: "min",
+		easing: "ease",
 
 		breakpoints: {
 			768: {

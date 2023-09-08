@@ -178,6 +178,11 @@
 			&:nth-child(3n + 1) &--list, &:nth-child(3n + 1) &--target {
 				padding-left: 57px;
 			}
+
+			border-bottom: 0;
+			&:first-child {
+				border-top: 0;
+			}
 		}
 
 		display: flex;
@@ -239,6 +244,12 @@
 				background: rgba(221, 221, 221, 0.16);
 				border-top: 1px solid rgba(85, 85, 85, 0.16);
 				border-bottom: 1px solid rgba(85, 85, 85, 0.16);
+
+				cursor: default;
+
+				&::before, &::after {
+					display: none;
+				}
 			}
 
 			font-family: var(--title-font);
