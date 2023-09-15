@@ -106,14 +106,13 @@
 		}
 
 		position: relative;
-		@media (any-hover: hover) {
+		/* @media (any-hover: hover) {
 			&:hover & {
 				&--tags li a {
-					border-color: rgba(0, 0, 0, 0.45);
-					background: transparent;
+					
 				}
 			}
-		}
+		} */
 
 		// .recent-work__card--tags
 
@@ -135,13 +134,10 @@
 				font-size: 0.375rem;
 				@include _550 {
 					font-size: 0.625rem;
-					
 				}
 				
 				@include _768 {
 					font-size: 0.75rem;	
-					
-					
 				}
 				
 				@include _992 {
@@ -177,6 +173,13 @@
 					text-align: center;
 
 					transition: border-color .2s ease, background .2s ease;
+
+					@media (any-hover: hover) {
+						&:hover {
+							border-color: rgba(0, 0, 0, 0.45);
+							background: transparent;
+						}
+					}
 				}
 			}
 		}
