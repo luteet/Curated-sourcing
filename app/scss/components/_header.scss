@@ -17,17 +17,11 @@
 
 		@include _992 {
 			& .header__burger {
-				top: 31px;
+				top: 38px;
 			}
 	
 			&._on-top .header__burger {
 				background: transparent;
-				
-				@media (any-hover: hover) {
-					&:hover {
-						background: var(--black);
-					}
-				}
 			}
 		}
 	}
@@ -42,14 +36,17 @@
 	
 			&._on-top .header__burger {
 				background: transparent;
-				color: var(--white);
+				color: rgba(0, 0, 0, 0.6);
 				> div > span {
-					background: var(--white);
+					background: rgba(0, 0, 0, 0.6);
 				}
-				
+
 				@media (any-hover: hover) {
 					&:hover {
-						background: var(--black);
+						color: var(--black);
+						> div > span {
+							background: var(--black);
+						}		
 					}
 				}
 			}
@@ -61,25 +58,24 @@
 		@include _992 {
 
 			.header__burger {
-				background: transparent;
-				color: var(--white);
+				color: rgba(0, 0, 0, 0.6);
 				> div > span {
-					background: var(--white);
+					background: rgba(0, 0, 0, 0.6);
 				}
 			}
 	
 			&._on-top .header__burger {
 				background: transparent;
-				color: var(--white);
+				color: rgba(0, 0, 0, 0.6);
 				> div > span {
-					background: var(--white);
+					background: rgba(0, 0, 0, 0.6);
 				}
 				
-				@media (any-hover: hover) {
+				/* @media (any-hover: hover) {
 					&:hover {
 						background: var(--black);
 					}
-				}
+				} */
 			}
 		}
 	}
@@ -152,7 +148,7 @@
 		display: flex;
 		justify-content: flex-end;
 
-		overflow-y: auto;
+		overflow: hidden;
 
 		opacity: 0; visibility: hidden;
 		
@@ -204,6 +200,7 @@
 			}
 
 			transition: color .1s ease;
+
 			&:hover {
 				&::before, &::after {
 					background: var(--accent);
@@ -222,18 +219,24 @@
 		&--body {
 			position: relative;
 			min-height: 100%;
-			width: min(394px,calc(100vw - 40px));
+			width: min(394px,calc(100vw - 40px)); //height: 0vh;
+			overflow-y: auto; overflow-x: hidden;
 			padding: 113px 0 30px 0;
+
+			transform: translate(100%,0);
+
+			transition: transform .3s ease;
 			//margin-right: calc(0px - var(--scrollbar-width,0px)/2);
 
 			background: var(--white);
-			filter: drop-shadow(var(--scrollbar-width) 0px 0px red);
+			//filter: drop-shadow(var(--scrollbar-width) 0px 0px red);
 			
 		}
 
 		&._mob-menu-active &--body {
 			width: min(calc(394px + var(--scrollbar-width,0px)),calc(100vw - 40px + var(--scrollbar-width,0px)));
 			padding-right: var(--scrollbar-width,0px);
+			transform: translate(0,0);
 		}
 
 		// .header__nav--list
@@ -244,7 +247,7 @@
 			flex-direction: column;
 			align-items: center;
 
-			height: 100%;
+			//height: 100%;
 		}
 
 		&--list > li {
@@ -290,28 +293,27 @@
 		position: relative;
 		@include _992 {
 			position: fixed;
-			right: max(var(--container-padding), calc(50% - #{math.div($containerLarge, 2)}px)); top: 28px;
+			right: max(var(--desktop-container-padding), calc(50% - #{math.div($containerLarge, 2)}px)); top: 28px;
 		}
 		&._mob-menu-active {
-			transform: translate(calc(1px - var(--scrollbar-width,0px)/2 - 0.5px));
+			transform: translate(calc(1px - var(--scrollbar-width,0px) - 1px),0);
 			@include _992 {
-				color: var(--white);
-				background: var(--dark);
+				color: var(--black);
 				> div > span {
-					background: var(--white);
+					background: var(--black);
 				}
 			}
 		}
 		//position: relative;
 		padding: 15px 0;
 		@include _992 {
-			padding: 15px;
+			padding: 10px;
 		}
 		background: var(--white);
 		text-transform: uppercase;
 	
 		> div {
-			width: 29px; height: 20px;
+			width: 29px; height: 15px;
 			position: relative;
 		}
 
@@ -320,8 +322,8 @@
 			
 			font-size: 0;
 			@include _992 {
-				padding-right: 20px;
-				font-size: 1.125rem;
+				padding-right: 15px;
+				font-size: 1rem;
 			}
 			line-height: 125%;
 		}
@@ -331,24 +333,26 @@
 		display: inline-flex;
 		align-items: center;
 
-		transition: background .3s ease, color .3s ease;
+		transition: color .3s ease, background .3s ease;
+		color: rgba(0, 0, 0, 0.6);
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--white);
-				background: var(--dark);
+				color: var(--black);
+				
+				//background: var(--dark);
 				> div > span {
-					background: var(--white);
+					background: var(--black);
 				}
 			}
 			
-			&:active {
+			/* &:active {
 				color: var(--white);
 				background: var(--dark-active);
 				> div > span {
 					background: var(--white);
 				}
-			}
+			} */
 		}
 	
 		& > div >  span {
@@ -357,7 +361,7 @@
 	
 			width: 100%; height: 2px;
 			border-radius: 5px;
-			background: var(--black);
+			background: rgba(0, 0, 0, 0.6);
 			
 			transition-duration: .3s;
 			transition-timing-function: ease;

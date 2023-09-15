@@ -30,6 +30,16 @@
 
 	&__result {
 		padding-top: 32px;
+
+		min-height: var(--height-filter,400px);
+
+		transition: opacity .3s ease;
+
+		&._loading {
+			opacity: .5;
+			pointer-events: none;
+			user-select: none;
+		}
 	}
 
 	// .our-work__list
@@ -59,7 +69,6 @@
 	// .our-work__card
 
 	&__card {
-		
 	}
 }
 
@@ -236,8 +245,6 @@
 
 			padding: 16px;
 			background: transparent;
-			
-			
 
 			@include _768 {
 				text-align: center;

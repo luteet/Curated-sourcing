@@ -17,6 +17,7 @@
 	--black: #000;
 
 	--container-padding: 16px;
+	--desktop-container-padding: 91px;
 }
 
 html, body {
@@ -87,17 +88,17 @@ section {
 	padding-right: var(--container-padding);
 	
 	@media (min-width: #{$containerMin}px) {
-		padding-left: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
-		padding-right: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+		padding-left: max(var(--desktop-container-padding), calc(50% - #{math.div($container, 2)}px));
+		padding-right: max(var(--desktop-container-padding), calc(50% - #{math.div($container, 2)}px));
 
 		&._min {
-			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
-			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+			padding-left: max(var(--desktop-container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+			padding-right: max(var(--desktop-container-padding), calc(50% - #{math.div($containerMin, 2)}px));
 		}
 
 		&._large {
-			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerLarge, 2)}px));
-			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerLarge, 2)}px));
+			padding-left: max(var(--desktop-container-padding), calc(50% - #{math.div($containerLarge, 2)}px));
+			padding-right: max(var(--desktop-container-padding), calc(50% - #{math.div($containerLarge, 2)}px));
 		}
 	}
 }
@@ -121,8 +122,8 @@ section {
 	
 	@include _768 {
 		font-size: 1rem;
-		padding: 13px;
-		min-width: 178px;
+		padding: 7px;
+		min-width: 148px;
 	}
 
 	background: var(--dark);
@@ -135,6 +136,7 @@ section {
 		&:hover {
 			background: transparent;
 			color: var(--dark);
+			//border-color: #B29387;
 			&._accent {
 				color: var(--accent);
 			}

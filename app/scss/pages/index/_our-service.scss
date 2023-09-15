@@ -79,6 +79,8 @@
 		p {
 			max-width: 370px;
 
+			opacity: .7;
+
 			&:not(:first-child) {
 				padding-top: 11px;
 			}
@@ -89,6 +91,8 @@
 			@include _550 {
 				font-size: 1.0625rem;
 				line-height: 190.47619%;
+
+				opacity: .6;
 			}
 		}
 
@@ -97,6 +101,7 @@
 			position: relative;
 			width: 100%;
 			text-align: left;
+			font-family: var(--title-font);
 
 			color: #000;
 
@@ -159,6 +164,9 @@
 			&--content {
 				grid-template-rows: 1fr;
 				padding-bottom: 13px;
+				@include _550 {
+					padding-bottom: 0;
+				}
 			}
 		}
 

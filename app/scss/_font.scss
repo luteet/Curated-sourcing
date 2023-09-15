@@ -29,9 +29,9 @@
 	@include font-include('Goudy Old Style', 400, swap, normal, 'GoudyStd');
 }
 
-@font-face {
+/* @font-face {
 	@include font-include('Goudy Old Style', 700, swap, normal, 'GoudyStd-Bold');
-}
+} */
 
 @font-face {
 	@include font-include('Futura PT', 700, swap, normal, 'FuturaPT-Book');
@@ -50,7 +50,7 @@
 	}
 
 	@include _992 {
-		font-size: 2.8125rem; // 45px
+		font-size: 2.3125rem; // 37px
 	}
 }
 
@@ -76,6 +76,7 @@
 	font-size: 1.375rem;
 	line-height: 144.444444%;
 	text-align: center;
+	font-weight: 400;
 
 	position: relative;
 	padding-bottom: 20px;
@@ -102,7 +103,7 @@
 	}
 	
 	@include _992 {
-		font-size: 2.8125rem;
+		font-size: 2.5rem;
 	}
 }
 
@@ -115,6 +116,7 @@
 	}
 	font-weight: 400;
 	font-size: 1.375rem;
+	line-height: 125%;
 	@include _550 {
 		font-size: 1.5rem;
 	}
@@ -124,10 +126,8 @@
 	}
 	
 	@include _992 {
-		font-size: 2.1875rem;
+		font-size: 1.875rem;
 	}
-	line-height: 125%;
-	
 
 	position: relative;
 	padding-bottom: 20px; padding-left: 5px;

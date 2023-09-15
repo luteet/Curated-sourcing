@@ -2,10 +2,10 @@
 
 	display: flex;
 	flex-direction: column;
-	
+
 	@include _992 {
 		flex-direction: row;
-		background: transparent;
+		background: rgba(242, 242, 242, 0.7);
 
 		min-height: calc(var(--svh,1vh)*100);
 		min-height: 100svh;
@@ -65,7 +65,7 @@
 
 			h3 {
 				font-family: var(--title-font);
-				font-size: 2.1875rem;
+				font-size: 1.875rem;
 				line-height: 185.714286%;
 				text-transform: uppercase;
 
@@ -78,6 +78,8 @@
 
 			p {
 				padding-top: 20px;
+
+				opacity: .7;
 			}
 
 			font-size: 0.875rem;
@@ -88,10 +90,6 @@
 			
 			@include _768 {
 				font-size: 1.125rem;
-			}
-			
-			@include _992 {
-				font-size: 1.3125rem;
 			}
 
 			line-height: 190.47619%;

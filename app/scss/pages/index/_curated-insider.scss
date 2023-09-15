@@ -138,10 +138,7 @@
 			@include _768 {
 				font-size: 0.75rem;
 			}
-			
-			@include _992 {
-				font-size: 0.875rem;
-			}
+
 			line-height: 135.714286%;
 			color: rgba(0, 0, 0, 0.42);
 		}
@@ -162,8 +159,9 @@
 			}
 			
 			@include _992 {
-				font-size: 1.125rem;
+				font-size: 1rem;
 			}
+
 			line-height: 166.666667%;
 			color: var(--black);
 			max-width: 222px;

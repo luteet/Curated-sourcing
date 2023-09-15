@@ -5,7 +5,7 @@
 	display: grid;
 
 	min-height: calc(var(--svh,1vh)*100);
-	min-height: calc(var(--svh,1svh)*100);
+	min-height: 100svh;
 
 	> * {
 		grid-area: 1/1;
@@ -14,7 +14,7 @@
 	// .index-hero__content
 
 	&__content {
-		padding-top: calc(var(--height-header) + 0px); padding-bottom: calc(var(--height-header) + 0px);
+		padding-top: calc(var(--height-header,50px) + 0px); padding-bottom: calc(var(--height-header,50px) + 0px);
 
 		display: flex;
 		flex-direction: column;
@@ -32,7 +32,7 @@
 		}
 
 		@include _992 {
-			padding-top: calc(var(--height-header) + 130px); padding-bottom: calc(var(--height-header) + 130px);
+			padding-top: calc(var(--height-header,50px) + 130px); padding-bottom: calc(var(--height-header,50px) + 130px);
 
 			justify-content: center;
 			align-items: flex-start;
@@ -73,7 +73,7 @@
 
 		@include _992 {
 			max-width: 40vw;
-			font-size: 1.3125rem;
+			opacity: .7;
 		}
 
 		@media (min-width: 1200px) {
@@ -82,6 +82,8 @@
 
 		font-size: 0.9375rem;
 		line-height: 175%;
+
+		
 	}
 
 	// .index-hero__btn
@@ -109,7 +111,7 @@
 		z-index: 2;
 		
 		@include _992 {
-			left: max(var(--container-padding), calc(50% - #{math.div($containerLarge, 2)}px)); bottom: 90px;
+			left: max(var(--desktop-container-padding), calc(50% - #{math.div($containerLarge, 2)}px)); bottom: 90px;
 			transform: translate(0,0);
 			width: auto; height: auto;
 			justify-content: stretch;

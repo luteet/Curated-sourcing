@@ -45,17 +45,18 @@
 		}
 		
 		@include _768 {
-			font-size: 1.25rem;
+			font-size: 1.125rem;
 		}
 		
 		@include _992 {
-			font-size: 1.3125rem;
 			max-width: calc(((100vw - var(--container-padding) * 2) * 0.5) - var(--container-padding));
 		}
 
 		@include _container {
 			max-width: 561px;
 		}
+
+		opacity: .7;
 		
 		p {
 			padding-top: 15px;
@@ -68,12 +69,20 @@
 
 		margin-top: 31px;
 
-		display: grid;
-		grid-template-columns: 100%;
-		@include _550 {
-			grid-template-columns: 1fr 1fr;
+		> div > p {
+			display: grid;
+			grid-template-columns: 100%;
+			@include _550 {
+				grid-template-columns: 1fr 1fr;
+			}
+
+			gap: 15px;
 		}
-		gap: 15px;
+
+		.wpcf7-response-output {
+			text-align: center;
+			padding-top: 15px;
+		}
 
 		@include _992 {
 			max-width: calc(((100vw - var(--container-padding) * 2) * 0.5) - var(--container-padding));
@@ -82,7 +91,12 @@
 		@include _container {
 			max-width: 676px;
 		}
+
 		width: 100%;
+
+		br {
+			display: none;
+		}
 
 		label {
 			display: block;
@@ -94,13 +108,10 @@
 			}
 			input {
 				border: 1px solid #C6C6C6;
-				padding: 17px 20px;
+				padding: 15px 17px;
 				width: 100%;
 
 				font-size: 1rem;
-				@include _550 {
-					font-size: 1.125rem;
-				}
 				line-height: 166.666667%;
 			}
 

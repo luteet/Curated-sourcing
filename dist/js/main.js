@@ -36,6 +36,10 @@ function getCoords(elem) {
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </get-coords> -=-=-=-=-=-=-=-=-=-=-=-=
 
+
+
+
+
 // =-=-=-=-=-=-=-=-=-=- <click events> -=-=-=-=-=-=-=-=-=-=-
 
 body.addEventListener('click', function (event) {
@@ -158,6 +162,8 @@ body.addEventListener('click', function (event) {
 
 let windowSize = 0;
 
+const filterRow = document.querySelector('.filter__row');
+
 function resize() {
 
 	html.style.setProperty("--height-header", header.offsetHeight + "px");
@@ -165,6 +171,8 @@ function resize() {
 	if(windowSize != window.innerWidth) {
 		html.style.setProperty("--svh", window.innerHeight * 0.01 + "px");
 	}
+
+	if(filterRow) html.style.setProperty('--height-filter', filterRow.offsetHeight + 'px');
 	
 	windowSize = window.innerWidth;
 	if(!body.classList.contains('._mob-menu-active')) {
@@ -199,7 +207,7 @@ if(document.querySelector('.index-hero__slider')) {
 			arrows: false,
 			autoScroll: {
 				pauseOnHover: false,
-				speed: index % 2 ? -0.7 : 1.1 + index * 0.3,
+				speed: index % 2 ? -0.5 : 0.5 + index * 0.3,
 			},
 			breakpoints: {
 				992: {

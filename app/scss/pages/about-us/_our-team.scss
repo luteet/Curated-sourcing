@@ -103,7 +103,7 @@
 			margin-top: 24px;
 
 			font-family: var(--title-font);
-			font-size: 1.25rem;
+			font-size: 1.125rem;
 			line-height: 125%;
 			text-transform: uppercase;
 
@@ -123,11 +123,7 @@
 			}
 			
 			@include _768 {
-				font-size: 1.25rem;
-			}
-			
-			@include _992 {
-				font-size: 1.3125rem;
+				font-size: 1.125rem;
 			}
 
 			line-height: 190.47619%;
