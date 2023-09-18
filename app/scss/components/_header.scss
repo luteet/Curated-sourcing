@@ -256,17 +256,33 @@
 
 		}
 
+		&--list .current_page_item > a > span {
+			border-bottom: 1px solid #555555;
+		}
+
+		&--list .current_page_item > a {
+			pointer-events: none;
+		}
+
 		&--list > li > a {
 			width: 100%;
 
 			display: block;
 			width: 100%;
 
-			padding: 7.5px 0;
+			padding: 5.5px 0;
+			> span {
+				display: inline-block;
+				padding: 2px 0;
+			}
 			font-size: 1.25rem;
 			line-height: 150%;
 			text-transform: uppercase;
 			color: var(--dark-2);
+
+			&:hover {
+				opacity: .4;
+			}
 
 			span {
 				display: inline-block;
@@ -274,15 +290,7 @@
 				border-bottom: 1px solid transparent;
 			}
 
-			transition: color .1s ease;
-
-			&:hover {
-				color: var(--accent);
-			}
-			
-			&:active {
-				color: var(--accent-active);
-			}
+			transition: opacity .2s ease;
 
 		}
 	}
